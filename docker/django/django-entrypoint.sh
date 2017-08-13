@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-do
-    echo "Waiting for django volume..."
-done
+
+echo "Waiting for django volume..."
 
 until python manage.py migrate --settings=config.settings.local
 do
