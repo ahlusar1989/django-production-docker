@@ -1,2 +1,9 @@
 # Virtual Environment
 venv
+
+# Environment vars
+.env
+
+# PyCache
+
+config/__pycache__/
