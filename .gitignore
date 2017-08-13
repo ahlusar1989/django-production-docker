@@ -6,4 +6,8 @@ venv
 
 # PyCache
 
-config/__pycache__/
+*/__pycache__/
+
+#Pyc Binaries
+
+*.pyc
