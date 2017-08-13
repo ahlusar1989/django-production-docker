@@ -15,3 +15,6 @@ venv
 #NPM Modules
 
 node_modules/
+
+#Mac Nonsense
+.DS_Store
