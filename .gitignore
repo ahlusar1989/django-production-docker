@@ -11,3 +11,7 @@ venv
 #Pyc Binaries
 
 *.pyc
+
+#NPM Modules
+
+node_modules/
