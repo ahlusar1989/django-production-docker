@@ -10,11 +10,6 @@ before_install:
   # Docker.
   - sudo apt-get update
 
-  # Now we can install the newer docker-engine which is required for the newer
-  # docker-composer we will install next. The messy options are to force it to
-  # be non-interactive (normally it asks you a bunch of config questions).
-  - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
-
   # Print out the current docker-compose version. Once this reports 1.14+ then we
   # do not need the following steps.
   - docker-compose --version
@@ -41,6 +36,6 @@ before_install:
   # whatever reason it's best to report that now before your tests start
   # otherwise it can be really tricky to debug why tests are failing sometimes.
   - docker ps
-  
+
   # finished? 
   - docker-compose down
