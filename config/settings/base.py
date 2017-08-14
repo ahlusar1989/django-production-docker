@@ -47,11 +47,13 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     'rest_framework',
     'knox',
+    'social_django',
 )
 
 LOCAL_APPS = (
     'project.users',
-    'project.accounts'
+    'project.accounts',
+    'project.authentication'
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -154,6 +156,11 @@ STATICFILES_FINDERS = (
 )
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(APPS_DIR('media'))
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (),
