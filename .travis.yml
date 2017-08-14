@@ -22,7 +22,8 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
 
-  # Check that docker-compose is now running the latest version (or at least the
+script:
+    # Check that docker-compose is now running the latest version (or at least the
   # one we specified). This is not to be confused with the version we printed
   # before doing the update.
   - docker-compose --version
@@ -36,9 +37,6 @@ before_install:
   # whatever reason it's best to report that now before your tests start
   # otherwise it can be really tricky to debug why tests are failing sometimes.
   - docker ps
-
-before_script:
-  - docker-compose up --build -d
 
 after_script:
   - docker-compose down  
